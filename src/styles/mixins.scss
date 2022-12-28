@@ -1,0 +1,30 @@
+@mixin flexbox() {
+  display: flex;
+}
+
+@mixin flexbox-column($justify: center, $align: center) {
+  @include flexbox;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flexbox-custom($justify: center, $align: center) {
+  @include flexbox;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flexbox-column-custom($justify: center, $align: center) {
+  @include flexbox-column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* 반응형 */
+
+@mixin tablet {
+  @media (max-width: 61.25rem) {
+    @content;
+  }
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+
+:root {
+  --color-black: #383838;
+  --color-white: #ffffff;
+
+  --wcm-btn-color: #5c7676;
+  --wcm-btn-hover-color: --wcm-btn-hover-color;
+
+  --wp-admin-theme-color: #007cba;
+  --wp-admin-theme-color-darker-10: #006ba1;
+  --wp-admin-theme-color-darker-20: #005a87;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: 'Noto Sans KR', Helvetica, Arial, Lucida, sans-serif;
+  color: #383838;
+  line-height: 1.6em;
+  font-size: 16px;
+  background-color: #ffffff;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+input:active,
+input:focus {
+  outline: none;
+}
+
+button {
+  background: none;
+}
