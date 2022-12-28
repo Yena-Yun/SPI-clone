@@ -23,7 +23,7 @@
 
 /* 반응형 */
 
-@mixin tablet {
+@mixin mobile {
   @media (max-width: 61.25rem) {
     @content;
   }
