@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { Header } from './Header';
 import styles from './index.module.scss';
 

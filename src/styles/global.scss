@@ -3,23 +3,18 @@
 :root {
   --color-black: #383838;
   --color-white: #ffffff;
-
-  --wcm-btn-color: #5c7676;
-  --wcm-btn-hover-color: --wcm-btn-hover-color;
-
-  --wp-admin-theme-color: #007cba;
-  --wp-admin-theme-color-darker-10: #006ba1;
-  --wp-admin-theme-color-darker-20: #005a87;
+  --color-primary: #0032a0;
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 html,
 body {
   font-family: 'Noto Sans KR', Helvetica, Arial, Lucida, sans-serif;
+  min-height: 100vh;
+  margin: 0;
   color: #383838;
   line-height: 1.6em;
   font-size: 16px;
