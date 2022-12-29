@@ -1,8 +1,156 @@
 @import 'styles/mixins';
 
 .header {
-  width: 1080px;
-  margin: 0 auto;
+  width: 100%;
+  background-color: var(--color-primary);
+
+  .headerOuter {
+    width: 100%;
+    padding: 8px 0;
+
+    .headerInner {
+      @include flexbox-custom(space-between, center);
+      position: relative;
+      width: 80%;
+      max-width: 1080px;
+      margin: 0 auto;
+
+      .logoWrap {
+        width: 128px;
+        max-width: 128px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .contentWrap {
+        @include flexbox;
+
+        .actionWrap {
+          @include flexbox-column-custom(center, flex-end);
+          order: 2;
+
+          .socialMediaList {
+            @include flexbox;
+            line-height: 26px;
+            order: 2;
+
+            .socialMediaListItem {
+              a.icon {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border-radius: 3px;
+                text-align: center;
+
+                &::before {
+                  width: 30px;
+                  height: 30px;
+                  font-size: 15px;
+                  line-height: 30px;
+                  color: var(--color-white);
+                }
+              }
+
+              .socialMediaName {
+                display: none;
+              }
+
+              &.socialInstagram {
+                a.icon::before {
+                  content: '\e09a';
+                }
+              }
+              &.socialLinkedIn {
+                a.icon::before {
+                  content: '\e09d';
+                }
+              }
+              &.socialFacebook {
+                a.icon::before {
+                  content: '\e093';
+                }
+              }
+              &.socialTwitter {
+                a.icon::before {
+                  content: '\e094';
+                }
+              }
+              &.socialYoutube {
+                a.icon::before {
+                  content: '\e0a3';
+                }
+              }
+            }
+          }
+
+          .menuWrap {
+            order: 3;
+
+            .menuNav {
+              margin-right: -11px;
+
+              .menuList {
+                @include flexbox;
+
+                .menuListItem {
+                  @include flexbox;
+                  align-items: stretch;
+                  padding: 0 11px;
+
+                  a {
+                    padding-bottom: 8px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: var(--color-white);
+                    letter-spacing: 0.06em;
+                  }
+                }
+              }
+            }
+          }
+
+          .languageSwitcher {
+            color: var(--color-white);
+            order: 1;
+
+            p {
+              font-size: 13px;
+              color: var(--color-white);
+
+              strong {
+                letter-spacing: 0.04em;
+              }
+
+              a {
+                font-size: 14px;
+                padding-top: 2px;
+              }
+            }
+          }
+        }
+
+        .subscribeButtonWrap {
+          position: absolute;
+          right: 200px;
+          margin-top: 24px;
+          margin-bottom: 1.5%;
+          order: 1;
+
+          a.subscribeButton {
+            display: block;
+            padding: 4.8px 16px;
+            font-weight: 600;
+            color: var(--color-white);
+            letter-spacing: 0.05em;
+            border: 1px solid var(--color-white);
+            border-radius: 7px;
+          }
+        }
+      }
+    }
+  }
 
   @include mobile {
     width: 100%;
