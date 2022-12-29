@@ -6,33 +6,51 @@
 
   .headerOuter {
     width: 100%;
+    height: 102.44px;
     padding: 8px 0;
+    border-bottom-color: #e4e4e4;
 
     .headerInner {
-      @include flexbox-custom(space-between, center);
       position: relative;
       width: 80%;
       max-width: 1080px;
+      height: 100%;
       margin: 0 auto;
 
       .logoWrap {
-        width: 128px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 130px;
         max-width: 128px;
+        line-height: 0;
+        float: left;
 
-        img {
-          width: 100%;
+        a {
+          display: inline-block;
+          line-height: 0;
+
+          .imageWrap {
+            display: block;
+            max-width: 100%;
+
+            img {
+              width: 128px;
+              max-width: 128px;
+            }
+          }
         }
       }
 
       .contentWrap {
-        @include flexbox;
-
         .actionWrap {
-          @include flexbox-column-custom(center, flex-end);
           order: 2;
 
           .socialMediaList {
             @include flexbox;
+            position: absolute;
+            right: -6px;
+            top: 5px;
+            margin-top: 20px;
             line-height: 26px;
             order: 2;
 
@@ -86,25 +104,45 @@
           }
 
           .menuWrap {
+            @include flexbox-custom(flex-end, center);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 200px;
+            margin-top: 36px;
+            float: right;
             order: 3;
 
-            .menuNav {
-              margin-right: -11px;
+            .menuClearfix {
+              @include flexbox;
+              -webkit-box-align: stretch;
+              align-items: stretch;
 
-              .menuList {
-                @include flexbox;
+              &::before {
+                content: ' ';
+                display: table;
+                line-height: 0;
+                clear: both;
+              }
+              .menuNav {
+                margin-right: -11px;
 
-                .menuListItem {
+                .menuList {
                   @include flexbox;
-                  align-items: stretch;
-                  padding: 0 11px;
 
-                  a {
-                    padding-bottom: 8px;
-                    font-size: 13px;
-                    font-weight: 600;
-                    color: var(--color-white);
-                    letter-spacing: 0.06em;
+                  .menuListItem {
+                    @include flexbox;
+                    align-items: stretch;
+                    margin-top: 8px;
+                    padding: 0 11px;
+
+                    a {
+                      padding-bottom: 8px;
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: var(--color-white);
+                      letter-spacing: 0.06em;
+                    }
                   }
                 }
               }
@@ -112,6 +150,10 @@
           }
 
           .languageSwitcher {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding-bottom: 10px;
             color: var(--color-white);
             order: 1;
 
@@ -125,7 +167,7 @@
 
               a {
                 font-size: 14px;
-                padding-top: 2px;
+                padding-top: 1px;
               }
             }
           }

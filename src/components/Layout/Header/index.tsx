@@ -8,10 +8,12 @@ export const Header = () => {
         <div className={styles.headerInner}>
           <div className={styles.logoWrap}>
             <a href='https://seoulpi.co.kr/'>
-              <img
-                src='https://seoulpi.co.kr/wp-content/uploads/2021/02/SPI-whit-logo-1.svg'
-                alt='SPI white logo'
-              />
+              <span className={styles.imageWrap}>
+                <img
+                  src='https://seoulpi.co.kr/wp-content/uploads/2021/02/SPI-whit-logo-1.svg'
+                  alt='SPI white logo'
+                />
+              </span>
             </a>
           </div>
           <div className={styles.contentWrap}>
@@ -114,16 +116,18 @@ export const Header = () => {
                 </li>
               </ul>
               <div className={styles.menuWrap}>
-                <nav className={styles.menuNav}>
-                  <ul className={styles.menuList}>
-                    <li className={styles.menuListItem}>
-                      <a href='https://seoulpi.co.kr/login/'>LOGIN</a>
-                    </li>
-                    <li className={styles.menuListItem}>
-                      <a href='https://seoulpi.co.kr/spireg/'>REGISTER</a>
-                    </li>
-                  </ul>
-                </nav>
+                <div className={styles.menuClearfix}>
+                  <nav className={styles.menuNav}>
+                    <ul className={styles.menuList}>
+                      <li className={styles.menuListItem}>
+                        <a href='https://seoulpi.co.kr/login/'>LOGIN</a>
+                      </li>
+                      <li className={styles.menuListItem}>
+                        <a href='https://seoulpi.co.kr/spireg/'>REGISTER</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
               <div className={styles.languageSwitcher}>
                 <p>
