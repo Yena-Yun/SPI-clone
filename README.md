@@ -1,6 +1,9 @@
 # 서울프라퍼티인사이트(SPI) 클론하기
 
-- 홈 화면의 주요 컴포넌트 클론
+- 홈 화면 클론
+
+![image](https://user-images.githubusercontent.com/68722179/209906850-d4bd8bbc-f41b-4d40-a8ef-ea5f612f9dcc.png)
+
 
 
 ## 새로 알게 된 것
