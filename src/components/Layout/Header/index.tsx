@@ -4,20 +4,20 @@ import styles from './index.module.scss';
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.headerOuter}>
-        <div className={styles.headerInner}>
-          <div className={styles.logoWrap}>
-            <a href='https://seoulpi.co.kr/'>
-              <span className={styles.imageWrap}>
-                <img
-                  src='https://seoulpi.co.kr/wp-content/uploads/2021/02/SPI-whit-logo-1.svg'
-                  alt='SPI white logo'
-                />
-              </span>
-            </a>
-          </div>
-          <div className={styles.contentWrap}>
-            <div className={styles.actionWrap}>
+      <div className={styles.innerContent}>
+        <div className={styles.firstHeaderSection}>
+          <div className={styles.firstHeaderContainer}>
+            <div className={styles.firstHeaderContainerInner}>
+              <div className={styles.logoWrap}>
+                <a href='https://seoulpi.co.kr/'>
+                  <span className={styles.imageWrap}>
+                    <img
+                      src='https://seoulpi.co.kr/wp-content/uploads/2021/02/SPI-whit-logo-1.svg'
+                      alt='SPI white logo'
+                    />
+                  </span>
+                </a>
+              </div>
               <ul className={styles.socialMediaList}>
                 <li
                   className={classnames(
@@ -140,17 +140,18 @@ export const Header = () => {
               <strong>| ENG</strong>
             </p> */}
               </div>
-            </div>
-            <div className={styles.subscribeButtonWrap}>
-              <a
-                href='https://seoulpi.co.kr/membership/'
-                className={styles.subscribeButton}
-              >
-                MEMBERSHIP
-              </a>
+              <div className={styles.subscribeButtonWrap}>
+                <a
+                  href='https://seoulpi.co.kr/membership/'
+                  className={styles.subscribeButton}
+                >
+                  MEMBERSHIP
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        <div className={styles.lastHeaderSection}></div>
       </div>
     </header>
   );

@@ -32,11 +32,13 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
-
-  &.icon {
-    font-family: ETmodules !important;
-  }
 }
+
+// .socialMediaListItem {
+//   a.icon::before {
+//     font-family: ETmodules !important;
+//   }
+// }
 
 h1,
 h2,

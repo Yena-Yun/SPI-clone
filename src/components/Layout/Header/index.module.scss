@@ -1,61 +1,90 @@
 @import 'styles/mixins';
 
 .header {
-  width: 100%;
-  background-color: var(--color-primary);
+  display: block;
 
-  .headerOuter {
-    width: 100%;
-    height: 102.44px;
-    padding: 8px 0;
-    border-bottom-color: #e4e4e4;
+  .innerContent {
+    position: relative;
+    z-index: 2;
 
-    .headerInner {
+    .firstHeaderSection {
       position: relative;
-      width: 80%;
-      max-width: 1080px;
-      height: 100%;
-      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+      height: 102.44px;
+      padding: 8px 0;
+      background-color: var(--color-primary);
+      border-bottom-color: #e4e4e4;
 
-      .logoWrap {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        width: 130px;
-        max-width: 128px;
-        line-height: 0;
-        float: left;
+      .firstHeaderContainer {
+        position: relative;
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        z-index: 3;
 
-        a {
-          display: inline-block;
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
           line-height: 0;
+          clear: both;
+          visibility: hidden;
+        }
 
-          .imageWrap {
-            display: block;
-            max-width: 100%;
+        .firstHeaderContainerInner {
+          position: relative;
+          min-height: 1px;
+          z-index: 3;
 
-            img {
-              width: 128px;
-              max-width: 128px;
+          .logoWrap {
+            width: 130px;
+            margin: 10px 0;
+            line-height: 0;
+            float: left;
+
+            .imageWrap {
+              position: relative;
+              display: block;
+              max-width: 100%;
+
+              img {
+                position: relative;
+                width: 128px;
+                max-width: 128px;
+                height: auto;
+              }
             }
           }
-        }
-      }
-
-      .contentWrap {
-        .actionWrap {
-          order: 2;
 
           .socialMediaList {
             @include flexbox;
             position: absolute;
             right: -6px;
             top: 5px;
-            margin-top: 20px;
+            margin-top: 22px;
+            color: var(--color-white);
             line-height: 26px;
-            order: 2;
+            text-align: right;
+
+            &::before {
+              content: ' ';
+              display: table;
+              line-height: 0;
+              clear: both;
+            }
 
             .socialMediaListItem {
+              position: relative;
+              display: inline-block;
+              margin-bottom: 8px;
+              color: var(--color-white);
+              line-height: 26px;
+
               a.icon {
+                box-sizing: content-box;
+                position: relative;
                 display: inline-block;
                 width: 30px;
                 height: 30px;
@@ -63,11 +92,16 @@
                 text-align: center;
 
                 &::before {
+                  font-family: 'ETmodules' !important;
+
+                  position: relative;
+                  display: block;
                   width: 30px;
                   height: 30px;
                   font-size: 15px;
                   line-height: 30px;
                   color: var(--color-white);
+                  z-index: 10;
                 }
               }
 
@@ -171,31 +205,34 @@
               }
             }
           }
-        }
 
-        .subscribeButtonWrap {
-          position: absolute;
-          right: 200px;
-          margin-top: 24px;
-          margin-bottom: 1.5%;
-          order: 1;
+          .subscribeButtonWrap {
+            position: absolute;
+            right: 200px;
+            margin-top: 24px;
+            margin-bottom: 1.5%;
+            order: 1;
 
-          a.subscribeButton {
-            display: block;
-            padding: 4.8px 16px;
-            font-weight: 600;
-            color: var(--color-white);
-            letter-spacing: 0.05em;
-            border: 1px solid var(--color-white);
-            border-radius: 7px;
+            a.subscribeButton {
+              display: block;
+              padding: 4.8px 16px;
+              font-weight: 600;
+              color: var(--color-white);
+              letter-spacing: 0.05em;
+              border: 1px solid var(--color-white);
+              border-radius: 7px;
+            }
           }
         }
       }
-    }
-  }
 
-  @include mobile {
-    width: 100%;
-    padding: 0 30px;
+      @include mobile {
+        width: 100%;
+        padding: 0 30px;
+      }
+    }
+
+    .lastHeaderSection {
+    }
   }
 }
