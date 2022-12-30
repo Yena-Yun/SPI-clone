@@ -141,11 +141,9 @@
             @include flexbox-custom(flex-end, center);
             position: absolute;
             right: 0;
-            bottom: 0;
             width: 200px;
             margin-top: 36px;
             float: right;
-            order: 3;
 
             .menuClearfix {
               @include flexbox;
@@ -158,6 +156,7 @@
                 line-height: 0;
                 clear: both;
               }
+
               .menuNav {
                 margin-right: -11px;
 

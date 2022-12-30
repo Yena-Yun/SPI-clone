@@ -34,12 +34,6 @@ a {
   color: inherit;
 }
 
-// .socialMediaListItem {
-//   a.icon::before {
-//     font-family: ETmodules !important;
-//   }
-// }
-
 h1,
 h2,
 h3,
@@ -56,5 +50,6 @@ input:focus {
 }
 
 button {
+  border: none;
   background: none;
 }

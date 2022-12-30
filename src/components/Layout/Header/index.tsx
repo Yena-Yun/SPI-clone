@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import styles from './index.module.scss';
+import { HeaderMenu } from './Menu';
 
 export const Header = () => {
   return (
@@ -129,6 +130,14 @@ export const Header = () => {
                   </nav>
                 </div>
               </div>
+              <div className={styles.subscribeButtonWrap}>
+                <a
+                  href='https://seoulpi.co.kr/membership/'
+                  className={styles.subscribeButton}
+                >
+                  MEMBERSHIP
+                </a>
+              </div>
               <div className={styles.languageSwitcher}>
                 <p>
                   <strong>KOR</strong>
@@ -140,18 +149,12 @@ export const Header = () => {
               <strong>| ENG</strong>
             </p> */}
               </div>
-              <div className={styles.subscribeButtonWrap}>
-                <a
-                  href='https://seoulpi.co.kr/membership/'
-                  className={styles.subscribeButton}
-                >
-                  MEMBERSHIP
-                </a>
-              </div>
             </div>
           </div>
         </div>
-        <div className={styles.lastHeaderSection}></div>
+        <div className={styles.lastHeaderSection}>
+          <HeaderMenu />
+        </div>
       </div>
     </header>
   );
