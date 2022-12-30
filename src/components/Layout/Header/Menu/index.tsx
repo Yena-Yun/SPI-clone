@@ -75,6 +75,11 @@ export const HeaderMenu = () => {
           </div>
         </div>
       </div>
+      <div className={styles.fixedLink}>
+        <p>
+          <a href='https://seoulpi.co.kr/talk-with-spi/'>TALK with SPI</a>
+        </p>
+      </div>
     </div>
   );
 };
